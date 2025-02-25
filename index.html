@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partei des Volkes (PfV)</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <div id="navbar-container"></div>
+    <!-- Hero section-->
+    <header class="masthead">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6">
+                    <!-- Hero text-->
+                    <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                        <h1 class="display-1 lh-1 mb-3">Willkommen bei der Partei fürs Volk</h1>
+                        <p id="dynamic-text" class="lead fw-normal text-muted mb-5"></p>
+                        <script>
+                            const sentences = [
+                                "Gemeinsam für eine bessere Zukunft.",
+                                "Für soziale Gerechtigkeit.",
+                                "Für wirtschaftliche Stabilität.",
+                                "Für eine nachhaltige Umweltpolitik.",
+                                "Für eine starke Gemeinschaft."
+                            ];
+                            let currentSentence = 0;
+                            const dynamicTextElement = document.getElementById('dynamic-text');
+
+                            function typeSentence(sentence, callback) {
+                                let i = 0;
+                                dynamicTextElement.textContent = '';
+                                const interval = setInterval(() => {
+                                    dynamicTextElement.textContent += sentence[i];
+                                    i++;
+                                    if (i >= sentence.length) {
+                                        clearInterval(interval);
+                                        if (callback) callback();
+                                    }
+                                }, 100);
+                            }
+
+                            function deleteSentence(callback) {
+                                let sentence = dynamicTextElement.textContent;
+                                let i = sentence.length;
+                                const interval = setInterval(() => {
+                                    dynamicTextElement.textContent = sentence.substring(0, i);
+                                    i--;
+                                    if (i < 0) {
+                                        clearInterval(interval);
+                                        if (callback) callback();
+                                    }
+                                }, 50);
+                            }
+
+                            function displayNextSentence() {
+                                typeSentence(sentences[currentSentence], () => {
+                                    setTimeout(() => {
+                                        deleteSentence(() => {
+                                            currentSentence = (currentSentence + 1) % sentences.length;
+                                            setTimeout(displayNextSentence, 500);
+                                        });
+                                    }, 20000);
+                                });
+                            }
+
+                            displayNextSentence();
+                        </script>
+                        <a href="#about" class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0">Mehr Erfahren</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Hero image-->
+                    <img src="assets\img\LogoOrig.png" alt="Partei des Volkes Logo" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About section-->
+    <section id="about" class="about">
+        <div class="container px-5">
+            <h2>Über Uns</h2>
+            <p>Die Partei fürs Volk setzt sich für soziale Gerechtigkeit, wirtschaftliche Stabilität und eine nachhaltige Umweltpolitik ein.</p>
+            <p>Unser umfangreiches Syntheseprogramm stellt einen Versuch dar, ein komplexes, mehrdimensionales politisches Konzept zu entwickeln, das traditionelle nationale Werte, ökologische Verantwortung, wirtschaftliche Innovation, soziale Gerechtigkeit sowie demokratische Partizipation miteinander verknüpft. Unser Ziel ist es, nicht nur einen Mittelweg zwischen scheinbar unvereinbaren Positionen zu finden, sondern eine zukunftsweisende Politik zu entwerfen, die den Herausforderungen des 21. Jahrhunderts gerecht wird. Unsere Vision: Ein Deutschland, das sowohl in seiner historischen Identität verankert als auch offen und innovativ den Weg in eine nachhaltige Zukunft geht.</p>
+        </div>
+    </section>
+    <!-- Policies section-->
+    <section id="policies" class="policies bg-light">
+        <div class="container px-5">
+            <h2>Unsere Politik</h2>
+            <div style="padding-bottom: 10px;">
+                <strong style="color: #B22222;">Erhalt nationaler Werte:</strong>
+                <span style="font-size: 1.2rem;">Die Politik betont das Bewusstsein und die Pflege einer gemeinsamen nationalen Identität, in der kulturelle Traditionen und historische Errungenschaften gewürdigt werden.</span>
+            </div>
+            <div style="padding-bottom: 10px;">
+                <strong style="color: #228B22;">Stärkung der Souveränität:</strong>
+                <span style="font-size: 1.2rem;">Nationale Entscheidungsprozesse werden gestärkt, um in einer globalisierten Welt eigenständig zu agieren – mit klaren Regeln für Migration und internationalen Austausch.</span>
+            </div>
+            <div style="padding-bottom: 10px;">
+                <strong style="color: #1E90FF;">Kulturförderung:</strong>
+                <span style="font-size: 1.2rem;">Die Förderung von regionalen und nationalen kulturellen Projekten soll die Identität und das Gemeinschaftsgefühl stärken, ohne den Blick für die multikulturelle Realität zu verlieren.</span>
+            </div>
+            <div style="padding-bottom: 10px;">
+                <strong style="color: #C71585;">Kontrollierte Zuwanderung:</strong>
+                <span style="font-size: 1.2rem;">Eine restriktivere Zuwanderungspolitik soll dabei helfen, die gesellschaftliche Kohäsion zu sichern, während gleichzeitig humanitäre Verpflichtungen beachtet werden.</span>
+            </div>
+            <div style="padding-bottom: 10px;">
+                <strong style="color: #3CB371;">Gezielte Integrationsmaßnahmen:</strong>
+                <span style="font-size: 1.2rem;">Neben der Sicherstellung von Sprachkursen und Bildungsangeboten sollen Migranten aktiv in den Arbeitsmarkt integriert werden – mit besonderem Augenmerk auf den Erhalt der kulturellen Identität beider Seiten.</span>
+            </div>
+            <div style="padding-bottom: 10px;">
+                <strong style="color: #6A5ACD;">Förderung der Vielfalt:</strong>
+                <span style="font-size: 1.2rem;">Die Politik strebt einen ausgewogenen Ansatz an, bei dem kulturelle Diversität als Bereicherung gesehen und gleichzeitig das gemeinsame Wertefundament gestärkt wird.</span>
+            </div>
+        </div>
+    </section>
+    <!-- Wahlprogramm Section entfernt -->
+    <!-- Events section-->
+    <section id="events" class="events">
+        <div class="container px-5">
+            <h2>Veranstaltungen</h2>
+            <p>Bleiben Sie auf dem Laufenden über unsere bevorstehenden Veranstaltungen und Aktivitäten.</p>
+        </div>
+    </section>
+    <!-- Contact section-->
+    <section id="contact" class="contact bg-light py-5">
+        <div class="container px-5">
+            <h2 class="text-center mb-4">Kontakt</h2>
+            <form action="#" method="POST" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Bitte geben Sie Ihren Namen ein.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Bitte geben Sie eine gültige Email-Adresse ein.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Nachricht:</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    <div class="invalid-feedback">
+                        Bitte geben Sie eine Nachricht ein.
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary rounded-pill">Senden</button>
+                </div>
+            </form>
+            <div class="text-center mt-4">
+                <h3>Weitere Kontaktmöglichkeiten</h3>
+                <p>Email: <a href="mailto:info@pfv.de">info@pfv-partei.de</a></p>
+                <p>Signal: +49 123 4567890</p>
+                <h3>Social Media</h3>
+                <div class="d-flex justify-content-center">
+                    <a href="https://www.facebook.com/pfv" class="me-3" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/img/facebook-icon.png" alt="Facebook" style="width: 30px;">
+                    </a>
+                    <a href="https://www.twitter.com/pfv" class="me-3" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/img/twitter-icon.png" alt="Twitter" style="width: 30px;">
+                    </a>
+                    <a href="https://www.instagram.com/parteifuersvolk" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/img/instagram-icon.png" alt="Instagram" style="width: 31px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+    <!-- Footer-->
+    <footer class="bg-black text-center py-5">
+        <div class="container px-5">
+            <div class="text-white-50 small">
+                <div class="mb-2">&copy; Partei fürs Volk 2025. Alle Rechte vorbehalten.</div>
+                <a href="#!">Datenschutz</a>
+                <span class="mx-1">&middot;</span>
+                <a href="#!">Impressum</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infos - Partei fürs Volk</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="Partei fürs Volk Logo" class="logo">
+            <h1>Partei fürs Volk</h1>
+        </div>
+    </header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html#home" class="btn">Home</a></li>
+            <li><a href="index.html#about" class="btn">Über Uns</a></li>
+            <li><a href="index.html#policies" class="btn">Politik</a></li>
+            <li><a href="index.html#events" class="btn">Veranstaltungen</a></li>
+            <li><a href="index.html#contact" class="btn">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Über Uns</h2>
+            <p>Die Deutsche Partei setzt sich für soziale Gerechtigkeit, wirtschaftliche Stabilität und eine nachhaltige Umweltpolitik ein.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Partei fürs Volk. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
