@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Rey - Partei fürs Volk</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/PfV-ParteiLogo-alone.ico" type="image/x-icon">
+    <meta name="description" content="Erfahren Sie mehr über Marco Rey, den stellvertretenden Vorsitzenden der Partei fürs Volk (PfV).">
+    <meta name="keywords" content="PfV, Partei fürs Volk, Marco Rey, Mitglieder, Politik, Deutschland">
+    <meta name="author" content="Partei fürs Volk">
+    <meta property="og:title" content="Marco Rey - Partei fürs Volk">
+    <meta property="og:description" content="Erfahren Sie mehr über Marco Rey, den stellvertretenden Vorsitzenden der Partei fürs Volk (PfV).">
+    <meta property="og:image" content="assets/img/OG-Banner-PfV.png">
+    <meta property="og:url" content="https://www.pfv-partei.de/MarcoRey.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marco Rey - Partei fürs Volk">
+    <meta name="twitter:description" content="Erfahren Sie mehr über Marco Rey, den stellvertretenden Vorsitzenden der Partei fürs Volk (PfV).">
+    <meta name="twitter:image" content="assets/img/OG-Banner-PfV.png">
+    <style>
+        .social-icons img {
+            width: 40px; /* Größe der Symbole anpassen */
+            height: 40px; /* Größe der Symbole anpassen */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Main Content -->
+    <div class="container" style="margin-top: 200px;">
+        <h1 class="text-center mb-5">Marco Rey</h1>
+        
+        <!-- Marco Rey Section -->
+        <section class="section-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="member-card">
+                            <div>
+                                <h3>Marco Rey</h3>
+                                <p>Stellvertretender Vorsitzender</p>
+                                <p>Marco Rey ist der stellvertretende Vorsitzende und engagiert sich besonders für Umweltpolitik und nachhaltige Entwicklung.</p>
+                                <p>Email: <a href="mailto:marco.rey@pfv-partei.de">marco.rey@pfv-partei.de</a></p>
+                                <div class="social-icons">
+                                    <a href="#"><img src="assets/img/instagram-icon.png" alt="Instagram"></a>
+                                    <a href="#"><img src="assets/img/twitter-icon.png" alt="Twitter"></a>
+                                </div>
+                            </div>
+                            <img src="assets\PersonenBilder\MarcoReyQuadratStudio.png" alt="Stellvertretender Vorsitzender" style=" width: auto; height: 260px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Load the navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        // Load the footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
