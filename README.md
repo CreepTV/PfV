@@ -1,6 +1,6 @@
 # PfV Website Projekt
 
-Dies ist das Repository für die Website der Partei für Veränderung (PfV). Die Website wurde mit HTML, CSS und JavaScript erstellt und verwendet das Bootstrap-Framework.
+Dies ist das Repository für die Website der Partei fürs Volk (PfV). Die Website wurde mit HTML, CSS und JavaScript erstellt und verwendet das Bootstrap-Framework.
 
 ## Inhaltsverzeichnis
 
