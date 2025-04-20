@@ -18,6 +18,7 @@
     <meta name="twitter:title" content="Partei fürs Volk (PfV)">
     <meta name="twitter:description" content="Willkommen bei der Partei fürs Volk (PfV). Erfahren Sie mehr über unsere Ziele und Visionen.">
     <meta name="twitter:image" content="assets/img/twitter-image.png">
+    <link rel="stylesheet" href="css/indexstylenew.css" id="new-styles" disabled>
     <style>
         @media (max-width: 767.98px) {
             .masthead {
@@ -219,5 +220,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script>
+        const toggleStylesButton = document.createElement('button');
+        toggleStylesButton.textContent = 'Toggle Styles';
+        toggleStylesButton.style.position = 'fixed';
+        toggleStylesButton.style.bottom = '10px';
+        toggleStylesButton.style.right = '10px';
+        toggleStylesButton.style.zIndex = '1000';
+        document.body.appendChild(toggleStylesButton);
+
+        toggleStylesButton.addEventListener('click', () => {
+            const newStyles = document.getElementById('new-styles');
+            const existingStyles = document.querySelector('link[href="css/styles.css"]');
+            if (newStyles.disabled) {
+                newStyles.disabled = false;
+                existingStyles.disabled = true;
+            } else {
+                newStyles.disabled = true;
+                existingStyles.disabled = false;
+            }
+        });
+    </script>
 </body>
 </html>

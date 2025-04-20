@@ -1,0 +1,27 @@
+@media (max-width: 767.98px) {
+    .masthead {
+        text-align: center;
+        margin-top: 0;
+    }
+    .masthead .container {
+        padding: 0.5rem; /* Weiter verringern Sie den Abstand */
+    }
+    .masthead .display-1 {
+        font-size: 2.5rem;
+    }
+    .masthead .lead {
+        font-size: 1rem;
+    }
+    .masthead img {
+        display: none;
+    }
+    .about, .policies, .events {
+        padding: 0.05rem; /* Weiter verringern Sie den Abstand */
+    }
+    .about h2, .policies h2, .events h2 {
+        font-size: 1.5rem;
+    }
+    .about p, .policies p, .events p {
+        font-size: 1rem;
+    }
+}
